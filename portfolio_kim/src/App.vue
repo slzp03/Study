@@ -1,15 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <AboutMe msg="활발하고 끈기있는 성격이 장점인 2년차 
+백엔드 개발자 김명훈입니다."/>
+  </div>
+  <Skill></Skill>
+  <Repository></Repository>
+  <Career></Career>
+  <Footer></Footer>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AboutMe from './components/AboutMe.vue'
+import Skill from './components/Skill.vue'
+import Repository from './components/Repository.vue'
+import Career from './components/Career.vue'
+import Footer from './components/Footer.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AboutMe,
+    Skill,
+    Repository,
+    Career,
+    Footer
   }
 }
 </script>
