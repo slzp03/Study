@@ -1,6 +1,7 @@
 <template>
   <div id="header-wrap">
-    <h1>레포지토리</h1>
+    <span>GitHub URL：https://github.com/slzp03
+    </span>
   </div>
 </template>
 
