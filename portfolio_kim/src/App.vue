@@ -1,23 +1,23 @@
 <template>
-  <div>
+  <div class="section">
     <Nav></Nav>
   </div>
-  <div>
+  <div class="section">
     <Header></Header>
   </div>
-  <div>
+  <div class="section">
     <AboutMe></AboutMe>
   </div>
-  <div>
+  <div class="section">
     <Skill></Skill>
   </div>
-  <div>
+  <div class="section">
     <Repository></Repository>
   </div>
-  <div>
+  <div class="section">
     <Career></Career>
   </div>
-  <div>
+  <div class="section">
     <Footer></Footer>
   </div>
 </template>
@@ -33,6 +33,7 @@ import Career from './components/Career.vue'
 import Footer from './components/Footer.vue'
 
 
+
 export default {
   name: 'App',
   components: {
@@ -44,6 +45,13 @@ export default {
     Career,
     Footer
   },
+  head: {
+    meta:[
+      {name: 'viewport', content: 'width=device-width,initial-scale=1.0,user-scalable=no'},
+      { property: 'og:type', content: 'website' }
+    ]
+  }
+  ,
   created() {
         console.log(this.$router)
   },
@@ -53,16 +61,35 @@ export default {
 
 
 <style>
-div {
-  display: block;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color:rgb(10, 6, 1);
-  margin-top: 60px;
-  
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans KR',sans-serif;
+    font-size: 15px;
+    user-select: none;
+
+
+    /* url(img/bot_bg.png)  */
+
 }
+.wrap {
+    width: 100%;
+    
+}
+.section {
+  min-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+    background: #1a73a0 ;
+    padding-bottom: 400px;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
 
 </style>
 

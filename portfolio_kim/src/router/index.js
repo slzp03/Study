@@ -1,5 +1,6 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
+import VueHead from 'vue-head'
 
 const AboutMe = () => import(/* webpackChunkName: "Home" */ '@/components/AboutMe.vue')
 const Repository = () => import(/* webpackChunkName: "Home" */ '@/components/Repository.vue')
@@ -7,6 +8,7 @@ const Skill = () => import(/* webpackChunkName: "Home" */ '@/components/Skill.vu
 const Career = () => import(/* webpackChunkName: "Home" */ '@/components/Career.vue')
 
 Vue.use(VueRouter)
+Vue.use(VueHead)
 
 const routes = [
   {
