@@ -1,7 +1,7 @@
 <template>
-  <div class="section">
-    <Nav></Nav>
-  </div>
+  <nav class="navbar">
+    <Nav/>
+  </nav>
   <div class="section">
     <Header></Header>
   </div>
@@ -50,46 +50,56 @@ export default {
       {name: 'viewport', content: 'width=device-width,initial-scale=1.0,user-scalable=no'},
       { property: 'og:type', content: 'website' }
     ]
-  }
-  ,
-  created() {
-        console.log(this.$router)
   },
+
 }
 </script>
-
-
-
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: 'Noto Sans KR',sans-serif;
-    font-size: 15px;
-    user-select: none;
-
-
-    /* url(img/bot_bg.png)  */
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+template {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-.wrap {
+a {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  color: antiquewhite;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  padding: 8px 12px;
+}
+@media screen and (max-width: 768px) {
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar_menu{
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     
-}
-.section {
-  min-width: 1200px;
-    overflow: hidden;
-    position: relative;
-    color: #ffffff;
-    background: #1a73a0 ;
-    padding-bottom: 400px;
+  }
+  .navbar_menu li {
     width: 100%;
-    margin-bottom: 50px;
-    position: relative;
+    text-align: center;
+  }
+  .navbar_icon {
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar_toggleBtn {
+    display: block;
+  }
+
+  .navbar_icon.active,
+  .navbar_menu.active {
+    display: flex;
+  }
 }
-
-
-
 </style>
 

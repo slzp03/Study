@@ -1,16 +1,20 @@
 <template>
-  <div class="nav">
-    <nav>
-      <ul class="menu">
-        <li class="nav-item"><a href="">Portfolio</a></li>
-        <li class="nav-item"><a href="">自己紹介</a></li>
-        <li class="nav-item"><a href="">スキル</a></li>
-        <li class="nav-item"><a href="">github</a></li>
-        <li class="nav-item"><a href="">履歴</a></li>
-      </ul>
-    </nav>
-    <router-view></router-view>
+  <div class="navbar_logo">
+    <i class="fa-solid fa-code"></i>
+    <a href="#">KMH Portfolio</a>
   </div>
+  <ul class="navbar_menu">
+    <li class="navbar-item"><a href="#">Portfolio</a></li>
+    <li class="navbar-item"><a href="#">自己紹介</a></li>
+    <li class="navbar-item"><a href="#">スキル</a></li>
+    <li class="navbar-item"><a href="#">github</a></li>
+    <li class="navbar-item"><a href="#">履歴</a></li>
+  </ul>
+  <div class="navbar_icon">
+    <li><i class="fa-brands fa-facebook"></i></li>
+    <li><i class="fa-brands fa-github"></i></li>
+  </div>
+  <a href="#" class="navbar_toggleBtn"><i class="fa-solid fa-bars"></i></a>
 </template>
 
 <script>
@@ -19,40 +23,42 @@ export default {
 }
 </script>
 <style>
-.nav {
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    top: 50px;
-    z-index: 99;
+
+.navbar_logo {
+  font-size: 24px;
+  color: antiquewhite;
+  padding: 8px 12px;
 }
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+.navbar_logo i {
+  color: aquamarine;
 }
-.menu {
-    height: 100%;
-    float: right;
-    margin-right: 200px;
-    font-size: 0;
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  padding-left: 0;
 }
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+.navbar_menu li {
+  padding: 8px 12px;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+.navbar_menu li:hover {
+  background-color: darkgoldenrod;
+  border-radius: 4px;
 }
-.menu > li > a {
-    display: block;
-    width: 100%;
-    height: 100%;
+.navbar_icon {
+  list-style: none;
+  color: beige;
+  display: flex;
+  padding-left: 0;
+}
+.navbar_icon li {
+  padding: 8px 12px;
+}
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: beige;
 }
 </style>
