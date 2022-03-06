@@ -2,22 +2,22 @@
   <nav class="navbar">
     <Nav/>
   </nav>
-  <div class="section">
+  <div class="header">
     <Header></Header>
   </div>
-  <div class="section">
+  <div class="aboutMe">
     <AboutMe></AboutMe>
   </div>
-  <div class="section">
+  <div class="skill">
     <Skill></Skill>
   </div>
-  <div class="section">
+  <div class="repository">
     <Repository></Repository>
   </div>
-  <div class="section">
+  <div class="career">
     <Career></Career>
   </div>
-  <div class="section">
+  <div class="final">
     <Footer></Footer>
   </div>
 </template>
@@ -56,8 +56,13 @@ export default {
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+body {
+  margin: 0%;
+  width: 100%;
+}
 template {
   margin: 0;
+  width:100%;
   font-family: 'Source Sans Pro', sans-serif;
 }
 a {
@@ -67,10 +72,12 @@ a {
 }
 .navbar {
   display: flex;
+  position: fixed;
+  width:100%;
   justify-content: space-between;
   align-items: center;
   background-color: #263343;
-  padding: 8px 12px;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .navbar{
@@ -101,5 +108,75 @@ a {
     display: flex;
   }
 }
+
+.header {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  background-color:burlywood;
+  width:100%;
+  padding: 8px 12px;
+  color: antiquewhite;
+}
+
+.aboutMe {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  display: gird;
+  align-items: center;
+  background-color:antiquewhite;
+  width:100%;
+  padding: 8px 12px;
+  color: antiquewhite;
+}
+
+.skill {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  display: gird;
+  align-items: center;
+  background-color:rgb(226, 84, 19);
+  width:100%;
+  padding: 8px 12px;
+  color: antiquewhite;
+  z-index: 0;
+}
+
+.repository {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  display: gird;
+  align-items: center;
+  text-align: center;
+  background-color:rgb(216, 150, 63);
+  width:100%;
+  padding: 8px 12px;
+  color: antiquewhite;
+}
+
+.career {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  display: gird;
+  align-items: center;
+  text-align: center;
+  background-color:rgb(129, 216, 30);
+  width:100%;
+  padding: 8px 12px;
+  color: antiquewhite;
+}
+
+.final {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  display: gird;
+  align-items: center;
+  background-color:rgb(138, 23, 173);
+  width:100%;
+  padding: 8px 12px;
+  color: antiquewhite;
+}
+
 </style>
 

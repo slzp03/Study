@@ -11,8 +11,8 @@
     <li class="navbar-item"><a href="#">履歴</a></li>
   </ul>
   <div class="navbar_icon">
-    <li><i class="fa-brands fa-facebook"></i></li>
-    <li><i class="fa-brands fa-github"></i></li>
+    <li><i class="fa-brands fa-facebook fa-2x"></i></li>
+    <li><i class="fa-brands fa-github fa-2x"></i></li>
   </div>
   <a href="#" class="navbar_toggleBtn"><i class="fa-solid fa-bars"></i></a>
 </template>
@@ -49,7 +49,7 @@ export default {
   list-style: none;
   color: beige;
   display: flex;
-  padding-left: 0;
+  padding-right: 100px;
 }
 .navbar_icon li {
   padding: 8px 12px;
